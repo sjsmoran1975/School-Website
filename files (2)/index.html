@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your School Name – Admissions, Fees & Campus Life</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">ST. Joseph's Higher Secondary School</a>
+    <nav aria-label="Main">
+      <a href="#about">New here</a><a href="#life">Campus life</a><a href="#stories">Stories</a><a href="#admission">Admission</a><a href="#pay">Pay & donate</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>A bright start for every child.</h1>
+    <p>Welcome to ST. Joseph's Higher Secondary School. Apply for admission, pay fees or donate, and see what a day at our school feels like, all from this page.</p>
+    <div class="row">
+      <a class="btn" href="#admission">Apply for admission</a>
+      <a class="btn alt" href="#pay">Pay fees or donate</a>
+    </div>
+  </div>
+  <div class="bands" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <h2>New to our school? Start here.</h2>
+    <p style="max-width:40em">Everything a parent needs to know before the first visit. Replace the details below with your own.</p>
+    <div class="facts">
+      <div class="fact"><h3>Classes</h3><p>LKG to Class 12</p></div>
+      <div class="fact"><h3>School hours</h3><p>Monday to Saturday, 8:30 am – 1:30 pm</p></div>
+      <div class="fact"><h3>Admission window</h3><p>Open from April to March each year</p></div>
+      <div class="fact"><h3>Visit us</h3><p>Parents are welcome to tour the campus any weekday morning</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="life" style="padding-top:0">
+  <div class="wrap">
+    <h2>Life on campus</h2>
+    <p>Photos and videos from classrooms, sports day and festivals.</p>
+    <div class="gallery">
+      <div class="ph wide">Morning assembly</div>
+      <div class="ph">Classroom</div>
+      <div class="ph">Playground</div>
+      <div class="ph">Science lab</div>
+      <div class="ph">Annual day</div>
+      <div class="ph">Library</div>
+      <div class="ph wide">Sports day</div>
+    </div>
+    <div class="video" role="img" aria-label="School video placeholder"><div><span>▶</span>Your school video goes here</div></div>
+  </div>
+</section>
+
+<section id="stories" class="band">
+  <div class="wrap">
+    <h2>Stories from our students</h2>
+    <div class="stories">
+      <article class="story"><div class="ph">Student photo</div><div class="t"><h3>Riya’s first stage</h3><p>Riya was too shy to speak in class. After joining our drama club, she led the annual day play in front of the whole school.</p></div></article>
+      <article class="story"><div class="ph">Student photo</div><div class="t"><h3>Aman and the school garden</h3><p>Aman started a small vegetable garden with his classmates. Today it supplies fresh greens for the school’s festival lunch.</p></div></article>
+      <article class="story"><div class="ph">Student photo</div><div class="t"><h3>Our science fair team</h3><p>Five students built a water-saving model from scrap material and won first place at the district science fair.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="admission">
+  <div class="wrap">
+    <h2>Admission form</h2>
+    <p style="max-width:40em">Fill in the form and send it. The school office will call you within two working days.</p>
+    <form id="adm" novalidate>
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+      <div class="full fhead"><strong>ST. JOSEPH’S HR. SEC. SCHOOL - MORANHAT</strong><span>ADMISSION FORM</span></div>
+
+      <div class="full top">
+        <div class="office">
+          <em>To be filled by the school</em>
+          <label>Sl. No.<input disabled></label>
+          <label>Date of Admission<input disabled></label>
+          <label>Admission No.<input disabled></label>
+        </div>
+        <div class="photo">
+          <div id="drop" class="drop" tabindex="0" role="button" aria-label="Add passport photo. Drag and drop or press Enter to choose a file">
+            <img id="pv" alt="Passport photo preview" hidden>
+            <div id="dropmsg">Pass Port<br>Photo<small>Drag and drop here, or tap to choose</small></div>
+          </div>
+          <input type="file" id="file" accept="image/*" hidden>
+          <button type="button" id="rm" class="lnk" hidden>Remove photo</button>
+        </div>
+      </div>
+
+      <label class="q full"><span class="n">1.</span><span class="qt">Name of the Candidate in Full (capital letters):<input name="student" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">2.</span><span class="qt">Date of Birth:<input type="date" name="dob" required></span></label>
+      <label class="q"><span class="n">3.</span><span class="qt">Class in which Admission is sought:<select name="class" required><option value="">Choose a class</option><option>LKG</option><option>UKG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></span></label>
+      <label class="q"><span class="n">4.</span><span class="qt">Father’s Name:<input name="father" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">5.</span><span class="qt">Father’s Occupation: (Specify)<input name="father_job" autocomplete="off"></span></label>
+      <label class="q"><span class="n">6.</span><span class="qt">Mother’s Name:<input name="mother" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">7.</span><span class="qt">Mother’s Occupation: (Specify)<input name="mother_job" autocomplete="off"></span></label>
+      <label class="q full"><span class="n">8.</span><span class="qt">Residential Address (Please mention P.O., P.S., District, PIN etc)<textarea name="address" required></textarea></span></label>
+      <label class="q"><span class="n">9.</span><span class="qt">Mobile No.<input type="tel" name="mobile" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit mobile number" autocomplete="tel"></span></label>
+      <label class="q"><span class="n">10.</span><span class="qt">Aadhar No:<input name="aadhaar" inputmode="numeric" pattern="[0-9]{12}" maxlength="12" title="Enter the 12-digit Aadhar number" autocomplete="off"></span></label>
+      <label class="q"><span class="n">11.</span><span class="qt">PEN No:<input name="pen" inputmode="numeric" autocomplete="off"></span></label>
+      <div class="q full"><span class="n">12.</span><span class="qt" role="radiogroup" aria-label="Religion">Religion:<span class="opts"><label class="tick"><input type="radio" name="religion" value="Hinduism"> Hinduism</label><label class="tick"><input type="radio" name="religion" value="Islam"> Islam</label><label class="tick"><input type="radio" name="religion" value="Christianity"> Christianity</label><label class="tick"><input type="radio" name="religion" value="RC"> RC</label><label class="tick"><input type="radio" name="religion" value="Sikhism"> Sikhism</label><label class="tick"><input type="radio" name="religion" value="Buddhism"> Buddhism</label><label class="tick"><input type="radio" name="religion" value="Jainism"> Jainism</label></span></span></div>
+      <div class="q full"><span class="n">13.</span><span class="qt" role="radiogroup" aria-label="Caste">Caste:<span class="opts"><label class="tick"><input type="radio" name="caste" value="ST"> ST</label><label class="tick"><input type="radio" name="caste" value="SC"> SC</label><label class="tick"><input type="radio" name="caste" value="OBC"> OBC</label><label class="tick"><input type="radio" name="caste" value="MOBC"> MOBC</label><label class="tick"><input type="radio" name="caste" value="GENERAL"> GENERAL</label><label class="tick"><input type="radio" name="caste" value="OTHER"> OTHER</label></span></span></div>
+
+      <ul class="full terms">
+        <li>The School Management reserves right to revise tution fees from time to time and to add or amend the rules and regulations of the school.</li>
+        <li>The School Management also reserves the right to withdraw my son/daughter from the school in case his/her conduct is found to be unsatisfactory and in that event, I shall abide by such decision. I have read the rules and regulations given in the prospectus of St Joseph’s Hr. Sec School, Moranhat, and I do herby undertake to abide by the same as long as my son/daughter continues his/her studies in the said school. He/she will not directly or indirectly take part in any political activity, nor shall he/she indulge in any sort of activities prejudicial to his/her studies and to the reputation of the institution.</li>
+        <li><strong>Admission fees once paid/deposited is non-refundable.</strong> However, Pupils joining or leaving the school during any term will have to pay all the fees of the terms. (12 months)</li>
+      </ul>
+      <label class="full"><span><strong>I, the undersigned, agree to abide by the decisions of the school with regard to the admission of my son/daughter</strong></span><input name="ward" id="ward" class="caps" required autocomplete="off"></label>
+      <p class="full" style="margin:0"><strong>and shall faithfully abide by the rules and regulations of the school which may be added and amended from time to time.</strong></p>
+
+      <label>Date:<input type="date" name="date" required></label>
+      <span></span>
+      <div class="sig"><span>Father’s Signature</span><canvas id="sig1" width="480" height="170" aria-label="Father’s signature, draw with finger or mouse"></canvas><button type="button" class="lnk" data-clear="sig1">Clear</button></div>
+      <div class="sig"><span>Mother’s Signature</span><canvas id="sig2" width="480" height="170" aria-label="Mother’s signature, draw with finger or mouse"></canvas><button type="button" class="lnk" data-clear="sig2">Clear</button></div>
+
+      <p class="note full"><strong>N.B.:</strong> Kindly submit a Xerox copy of the Birth Certificate, Aadhar card, Transfer certificate, Progress report card &amp; two passport size photo along with the form.</p>
+      <div class="full"><button class="btn" id="send" type="submit">Send admission request</button></div>
+      <p id="ok" class="full" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="pay" class="band">
+  <div class="wrap pay">
+    <div>
+      <h2>Pay fees or donate</h2>
+      <p>Scan the QR code with any UPI app.</p>
+      <ul>
+        <li>For fees, write the student’s name and class in the payment note.</li>
+        <li>For a donation, write “Donation” in the note.</li>
+        <li>Keep the payment screenshot and show it at the school office for a receipt.</li>
+      </ul>
+      <p class="note"><b>UPI ID:</b> yourschool@upi</p>
+    </div>
+    <div class="qr">
+      <svg viewBox="0 0 100 100" role="img" aria-label="Payment QR code placeholder">
+        <rect width="100" height="100" fill="#fff"/>
+        <g fill="#1F1300"><rect x="6" y="6" width="26" height="26"/><rect x="68" y="6" width="26" height="26"/><rect x="6" y="68" width="26" height="26"/></g>
+        <g fill="#fff"><rect x="12" y="12" width="14" height="14"/><rect x="74" y="12" width="14" height="14"/><rect x="12" y="74" width="14" height="14"/></g>
+        <g fill="#1F1300"><rect x="16" y="16" width="6" height="6"/><rect x="78" y="16" width="6" height="6"/><rect x="16" y="78" width="6" height="6"/><rect x="40" y="10" width="6" height="6"/><rect x="52" y="22" width="6" height="6"/><rect x="40" y="40" width="20" height="6"/><rect x="46" y="52" width="6" height="18"/><rect x="66" y="48" width="6" height="6"/><rect x="76" y="62" width="14" height="6"/><rect x="60" y="76" width="6" height="14"/><rect x="78" y="80" width="12" height="6"/></g>
+      </svg>
+      Replace with your school’s QR
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact us</h2>
+    <div class="cgrid">
+      <div><h3>Address</h3><p>Your School Name<br>Street, Town, District<br>PIN 000000</p></div>
+      <div><h3>Call or WhatsApp</h3><p><a href="tel:+910000000000">+91 00000 00000</a></p></div>
+      <div><h3>Email</h3><p><a href="mailto:office@yourschool.example">office@yourschool.example</a></p></div>
+      <div><h3>Office hours</h3><p>Monday to Saturday<br>9:00 am – 3:00 pm</p></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© ST.Joseph's. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>
