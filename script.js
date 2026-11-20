@@ -96,13 +96,19 @@ form.addEventListener('submit', function (e) {
   btn.disabled = true;
   btn.textContent = 'Sending…';
 
-  fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(data) })
-    .then(function () {
+  fetch(SHEET_URL, { method: 'POST', body: new URLSearchParams(data) })
+    .then(function (res) {
+      if (!res.ok) throw new Error('Server error: ' + res.status);
+      return res.text();
+    })
+    .then(function (txt) {
+      if (txt.trim() !== 'ok') throw new Error('Unexpected response: ' + txt);
       form.reset(); rm.click(); pads.sig1.clear(); pads.sig2.clear(); delete ward.dataset.edited;
       show('Thank you. Your admission request has been received. The school office will call you within two working days.');
     })
-    .catch(function () {
-      show('Could not send. Check your internet or call the school office.', true);
+    .catch(function (err) {
+      console.error(err);
+      show('Could not save form (' + err.message + '). Please check setup or call the school office.', true);
     })
     .finally(function () {
       btn.disabled = false;
