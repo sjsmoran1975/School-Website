@@ -4,92 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Your School Name – Admissions, Fees & Campus Life</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --sand:#DFD6A7; --sun:#F7CE5B; --amber:#F7B05B; --olive:#AF9B46; --ink:#1F1300;
-  --bg:#DFD6A7; --surface:#F7CE5B; --surface2:#F7B05B; --text:#1F1300; --line:#AF9B46; --card:#F3EDC9;
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--bg:#1F1300;--card:#2D2108;--text:#DFD6A7;--line:#AF9B46;}
-}
-:root[data-theme="dark"]{--bg:#1F1300;--card:#2D2108;--text:#DFD6A7;--line:#AF9B46;}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Atkinson Hyperlegible",system-ui,sans-serif}
-h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,sans-serif;line-height:1.1;margin:0 0 .5em;letter-spacing:-.01em}
-h1{font-size:clamp(2.4rem,7vw,4.6rem);font-weight:800}
-h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:700}
-h3{font-size:1.25rem;font-weight:700}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px;box-shadow:0 0 0 6px var(--sun)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-section{padding:72px 0}
-header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--sand);padding-top:env(safe-area-inset-top,0px)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;flex-wrap:wrap}
-.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--sun)}
-nav{display:flex;gap:4px;flex-wrap:wrap}
-nav a{text-decoration:none;padding:8px 12px;border-radius:999px;font-size:.95rem}
-nav a:hover{background:var(--sun);color:var(--ink)}
-.btn{display:inline-block;background:var(--ink);color:var(--sun);padding:14px 26px;border-radius:12px;font-weight:700;text-decoration:none;border:0;font:700 1rem "Atkinson Hyperlegible",sans-serif;cursor:pointer}
-.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
-.btn:hover{background:var(--olive);color:var(--ink)}
-/* hero */
-.hero{background:var(--sun);color:var(--ink);padding:80px 0 0;overflow:hidden}
-.hero p{font-size:1.2rem;max-width:34em}
-.hero .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.bands{display:grid;grid-template-columns:repeat(4,1fr);height:34px;margin-top:64px}
-.bands i:nth-child(1){background:var(--sand)}.bands i:nth-child(2){background:var(--amber)}.bands i:nth-child(3){background:var(--olive)}.bands i:nth-child(4){background:var(--ink)}
-/* about */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px}
-.fact{background:var(--card);border-left:8px solid var(--amber);padding:18px 20px;border-radius:4px 14px 14px 4px}
-.fact:nth-child(2){border-color:var(--sun)}.fact:nth-child(3){border-color:var(--olive)}.fact:nth-child(4){border-color:var(--ink)}
-.fact p{margin:0}
-/* gallery */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-top:24px}
-.ph{aspect-ratio:4/3;border-radius:14px;display:flex;align-items:flex-end;padding:12px;font-weight:700;color:var(--ink);background:var(--sun)}
-.ph:nth-child(4n+2){background:var(--amber)}.ph:nth-child(4n+3){background:var(--olive)}.ph:nth-child(4n){background:var(--sand);box-shadow:inset 0 0 0 2px var(--olive)}
-.ph.wide{grid-column:span 2}
-.video{margin-top:24px;aspect-ratio:16/9;max-height:460px;width:100%;border-radius:18px;background:var(--ink);color:var(--sun);display:grid;place-items:center;text-align:center;padding:20px}
-.video span{display:block;font-size:3rem}
-/* stories */
-.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:24px}
-.story{background:var(--card);border-radius:18px;overflow:hidden}
-.story .ph{border-radius:0;aspect-ratio:16/8}
-.story div.t{padding:18px 20px 22px}
-.story p{margin:0 0 .6em}
-/* admission */
-.band{background:var(--amber);color:var(--ink)}
-.band .btn{background:var(--ink);color:var(--sun)}
-form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;background:var(--sand);color:var(--ink);padding:26px;border-radius:20px}
-label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
-input,select,textarea{font:400 1rem "Atkinson Hyperlegible",sans-serif;padding:12px;border:2px solid var(--olive);border-radius:10px;background:#fff8;color:var(--ink);width:100%}
-textarea{min-height:90px;resize:vertical}
-.full{grid-column:1/-1}
-.note{font-size:.92rem;opacity:.85}
-#ok{display:none;background:var(--ink);color:var(--sun);padding:14px 18px;border-radius:12px}
-/* pay */
-.pay{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:center}
-.qr{background:#fff;border:6px solid var(--ink);border-radius:18px;padding:14px;color:var(--ink);text-align:center;font-weight:700}
-.qr svg,.qr img{width:100%;height:auto;display:block}
-.pay ul{padding-left:1.1em;margin:0}
-/* contact */
-.contact{background:var(--ink);color:var(--sand)}
-.contact a{color:var(--sun)}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:20px}
-.cgrid h3{color:var(--sun)}
-footer{background:var(--ink);color:var(--olive);text-align:center;padding:18px 20px calc(18px + env(safe-area-inset-bottom,0px));font-size:.9rem}
-@media (max-width:720px){form{grid-template-columns:1fr}.pay{grid-template-columns:1fr}.ph.wide{grid-column:auto}.bands{margin-top:40px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <a class="brand" href="#top">Your School Name</a>
+    <a class="brand" href="#top"><img src="logo.png" alt="" width="44" height="44"><span>ST. Joseph's Higher Secondary School</span></a>
     <nav aria-label="Main">
       <a href="#about">New here</a><a href="#life">Campus life</a><a href="#stories">Stories</a><a href="#admission">Admission</a><a href="#pay">Pay & donate</a><a href="#contact">Contact</a>
     </nav>
@@ -100,7 +24,7 @@ footer{background:var(--ink);color:var(--olive);text-align:center;padding:18px 2
 <div class="hero">
   <div class="wrap">
     <h1>A bright start for every child.</h1>
-    <p>Welcome to Your School Name. Apply for admission, pay fees or donate, and see what a day at our school feels like, all from this page.</p>
+    <p>Welcome to ST. Joseph's Higher Secondary School. Apply for admission, pay fees or donate, and see what a day at our school feels like, all from this page.</p>
     <div class="row">
       <a class="btn" href="#admission">Apply for admission</a>
       <a class="btn alt" href="#pay">Pay fees or donate</a>
@@ -114,9 +38,9 @@ footer{background:var(--ink);color:var(--olive);text-align:center;padding:18px 2
     <h2>New to our school? Start here.</h2>
     <p style="max-width:40em">Everything a parent needs to know before the first visit. Replace the details below with your own.</p>
     <div class="facts">
-      <div class="fact"><h3>Classes</h3><p>Nursery to Class 10</p></div>
-      <div class="fact"><h3>School hours</h3><p>Monday to Saturday, 8:30 am – 2:30 pm</p></div>
-      <div class="fact"><h3>Admission window</h3><p>Open from January to March each year</p></div>
+      <div class="fact"><h3>Classes</h3><p>LKG to Class 12</p></div>
+      <div class="fact"><h3>School hours</h3><p>Monday to Saturday, 8:30 am – 1:30 pm</p></div>
+      <div class="fact"><h3>Admission window</h3><p>Open from April to March each year</p></div>
       <div class="fact"><h3>Visit us</h3><p>Parents are welcome to tour the campus any weekday morning</p></div>
     </div>
   </div>
@@ -154,19 +78,58 @@ footer{background:var(--ink);color:var(--olive);text-align:center;padding:18px 2
   <div class="wrap">
     <h2>Admission form</h2>
     <p style="max-width:40em">Fill in the form and send it. The school office will call you within two working days.</p>
-    <form id="adm">
-      <label>Student’s full name<input name="student" required autocomplete="off"></label>
-      <label>Date of birth<input type="date" name="dob" required></label>
-      <label>Class applying for
-        <select name="class" required><option value="">Choose a class</option><option>Nursery</option><option>LKG</option><option>UKG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></label>
-      <label>Previous school (if any)<input name="prev" autocomplete="off"></label>
-      <label>Parent or guardian name<input name="parent" required autocomplete="name"></label>
-      <label>Phone number<input type="tel" name="phone" required autocomplete="tel"></label>
-      <label class="full">Email<input type="email" name="email" autocomplete="email"></label>
-      <label class="full">Home address<textarea name="addr" required></textarea></label>
-      <div class="full"><button class="btn" type="submit">Send admission request</button></div>
-      <p id="ok" class="full" role="status">Your email app should open with the form filled in. Press send there to finish.</p>
-      <p class="note full">Keep the birth certificate and last report card ready for the school visit.</p>
+    <form id="adm" novalidate>
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+      <div class="full fhead"><img src="logo.png" alt="St. Joseph’s school logo" width="84" height="84"><strong>ST. JOSEPH’S HR. SEC. SCHOOL - MORANHAT</strong><span>ADMISSION FORM</span></div>
+
+      <div class="full top">
+        <div class="office">
+          <em>To be filled by the school</em>
+          <label>Sl. No.<input disabled></label>
+          <label>Date of Admission<input disabled></label>
+          <label>Admission No.<input disabled></label>
+        </div>
+        <div class="photo">
+          <div id="drop" class="drop" tabindex="0" role="button" aria-label="Add passport photo. Drag and drop or press Enter to choose a file">
+            <img id="pv" alt="Passport photo preview" hidden>
+            <div id="dropmsg">Pass Port<br>Photo<small>Drag and drop here, or tap to choose</small></div>
+          </div>
+          <input type="file" id="file" accept="image/*" hidden>
+          <button type="button" id="rm" class="lnk" hidden>Remove photo</button>
+        </div>
+      </div>
+
+      <label class="q full"><span class="n">1.</span><span class="qt">Name of the Candidate in Full (capital letters):<input name="student" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">2.</span><span class="qt">Date of Birth:<input type="date" name="dob" required></span></label>
+      <label class="q"><span class="n">3.</span><span class="qt">Class in which Admission is sought:<select name="class" required><option value="">Choose a class</option><option>LKG</option><option>UKG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></span></label>
+      <label class="q"><span class="n">4.</span><span class="qt">Father’s Name:<input name="father" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">5.</span><span class="qt">Father’s Occupation: (Specify)<input name="father_job" autocomplete="off"></span></label>
+      <label class="q"><span class="n">6.</span><span class="qt">Mother’s Name:<input name="mother" class="caps" required autocomplete="off"></span></label>
+      <label class="q"><span class="n">7.</span><span class="qt">Mother’s Occupation: (Specify)<input name="mother_job" autocomplete="off"></span></label>
+      <label class="q full"><span class="n">8.</span><span class="qt">Residential Address (Please mention P.O., P.S., District, PIN etc)<textarea name="address" required></textarea></span></label>
+      <label class="q"><span class="n">9.</span><span class="qt">Mobile No.<input type="tel" name="mobile" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" title="Enter a 10-digit mobile number" autocomplete="tel"></span></label>
+      <label class="q"><span class="n">10.</span><span class="qt">Aadhar No:<input name="aadhaar" inputmode="numeric" pattern="[0-9]{12}" maxlength="12" title="Enter the 12-digit Aadhar number" autocomplete="off"></span></label>
+      <label class="q"><span class="n">11.</span><span class="qt">PEN No:<input name="pen" inputmode="numeric" autocomplete="off"></span></label>
+      <div class="q full"><span class="n">12.</span><span class="qt" role="radiogroup" aria-label="Religion">Religion:<span class="opts"><label class="tick"><input type="radio" name="religion" value="Hinduism"> Hinduism</label><label class="tick"><input type="radio" name="religion" value="Islam"> Islam</label><label class="tick"><input type="radio" name="religion" value="Christianity"> Christianity</label><label class="tick"><input type="radio" name="religion" value="RC"> RC</label><label class="tick"><input type="radio" name="religion" value="Sikhism"> Sikhism</label><label class="tick"><input type="radio" name="religion" value="Buddhism"> Buddhism</label><label class="tick"><input type="radio" name="religion" value="Jainism"> Jainism</label></span></span></div>
+      <div class="q full"><span class="n">13.</span><span class="qt" role="radiogroup" aria-label="Caste">Caste:<span class="opts"><label class="tick"><input type="radio" name="caste" value="ST"> ST</label><label class="tick"><input type="radio" name="caste" value="SC"> SC</label><label class="tick"><input type="radio" name="caste" value="OBC"> OBC</label><label class="tick"><input type="radio" name="caste" value="MOBC"> MOBC</label><label class="tick"><input type="radio" name="caste" value="GENERAL"> GENERAL</label><label class="tick"><input type="radio" name="caste" value="OTHER"> OTHER</label></span></span></div>
+
+      <ul class="full terms">
+        <li>The School Management reserves right to revise tution fees from time to time and to add or amend the rules and regulations of the school.</li>
+        <li>The School Management also reserves the right to withdraw my son/daughter from the school in case his/her conduct is found to be unsatisfactory and in that event, I shall abide by such decision. I have read the rules and regulations given in the prospectus of St Joseph’s Hr. Sec School, Moranhat, and I do herby undertake to abide by the same as long as my son/daughter continues his/her studies in the said school. He/she will not directly or indirectly take part in any political activity, nor shall he/she indulge in any sort of activities prejudicial to his/her studies and to the reputation of the institution.</li>
+        <li><strong>Admission fees once paid/deposited is non-refundable.</strong> However, Pupils joining or leaving the school during any term will have to pay all the fees of the terms. (12 months)</li>
+      </ul>
+      <label class="full"><span><strong>I, the undersigned, agree to abide by the decisions of the school with regard to the admission of my son/daughter</strong></span><input name="ward" id="ward" class="caps" required autocomplete="off"></label>
+      <p class="full" style="margin:0"><strong>and shall faithfully abide by the rules and regulations of the school which may be added and amended from time to time.</strong></p>
+
+      <label>Date:<input type="date" name="date" required></label>
+      <span></span>
+      <div class="sig"><span>Father’s Signature</span><canvas id="sig1" width="480" height="170" aria-label="Father’s signature, draw with finger or mouse"></canvas><button type="button" class="lnk" data-clear="sig1">Clear</button></div>
+      <div class="sig"><span>Mother’s Signature</span><canvas id="sig2" width="480" height="170" aria-label="Mother’s signature, draw with finger or mouse"></canvas><button type="button" class="lnk" data-clear="sig2">Clear</button></div>
+
+      <p class="note full"><strong>N.B.:</strong> Kindly submit a Xerox copy of the Birth Certificate, Aadhar card, Transfer certificate, Progress report card &amp; two passport size photo along with the form.</p>
+      <div class="full"><button class="btn" id="send" type="submit">Send admission request</button></div>
+      <p id="ok" class="full" role="status"></p>
     </form>
   </div>
 </section>
@@ -207,16 +170,7 @@ footer{background:var(--ink);color:var(--olive);text-align:center;padding:18px 2
   </div>
 </section>
 </main>
-<footer>© Your School Name. All rights reserved.</footer>
-
-<script>
-document.getElementById('adm').addEventListener('submit',function(e){
-  e.preventDefault();
-  var f=new FormData(e.target),b='Admission request%0D%0A%0D%0A';
-  f.forEach(function(v,k){b+=encodeURIComponent(k+': '+v)+'%0D%0A';});
-  document.getElementById('ok').style.display='block';
-  location.href='mailto:office@yourschool.example?subject='+encodeURIComponent('Admission request')+'&body='+b;
-});
-</script>
+<footer>© ST.Joseph's. All rights reserved.</footer>
+<script src="script.js"></script>
 </body>
 </html>
